@@ -23,7 +23,7 @@ def get_data():
 		for j in range(len(data2)):
 			comment= {}
 			if(data1[i].get('id') == data2[j].get('postId')):
-				x = 0
+				x = 1
 				while x <= j:
 					for j in range(len(data2)):
 						comment[x] = data2[j]
