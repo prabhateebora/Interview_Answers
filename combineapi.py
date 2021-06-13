@@ -1,4 +1,3 @@
-
 import requests
 import json
 
@@ -21,18 +20,18 @@ def get_data():
 	for i in range(len(data1)):
 		
 		for j in range(len(data2)):
-			comment= {}
+			comment= []
 			if(data1[i].get('id') == data2[j].get('postId')):
-				x = 1
-				while x <= j:
-					for j in range(len(data2)):
-						comment[x] = data2[j]
-						x = x + 1
-				data1[i]['comments']= comment    
+				
+				for j in range(len(data2)):
+					comment.append( data2[j])
+				data1[i]['comments']= comment
+						
+				   
 
 			
 	json_data = json.dumps(data1)
 	print(json_data)
 	return json_data
 
-get_data()    
+get_data()   
