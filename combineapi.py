@@ -28,7 +28,7 @@ def get_data():
 					for j in range(len(data2)):
 						comment[x] = data2[j]
 						x = x + 1
-				data1[i]['comment']= comment    
+				data1[i]['comments']= comment    
 
 			
 	json_data = json.dumps(data1)
